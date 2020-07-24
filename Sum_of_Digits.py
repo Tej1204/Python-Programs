@@ -1,10 +1,13 @@
 num = input("Enter any number: ")
+num = int(num)
 sum = 0
 
-a = 945 % 10
-b = 945//10
-c = b % 10
-d = b//10
-e = d % 10
+while True:
+    dig = num % 10
+    sum = sum + dig
+    num = num//10
+    if num == 0:
+        break
 
-print(a,c,e)
+print("\nThe sum of digits is: ")
+print(sum)
