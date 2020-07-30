@@ -1,14 +1,11 @@
 num = input("Enter a number: ")
 num = int(num)
-sum = 0
+reversed_num = 0
 
-while True:
+while num > 0:
     dig = num % 10
-    dig1 = dig * (10**(len(str(num))-1))
-    sum = sum + dig1
+    reversed_num = (reversed_num * 10) + dig
     num = num//10
-    if num == 0:
-        break
 
 print("\nThe number reversed is: ")
-print(sum)
+print(reversed_num)
