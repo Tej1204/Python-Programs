@@ -5,7 +5,7 @@ def convert_to_five(value):
         if dig == 0:
             dig = dig + 5
         value = value // 10
-        dig = dig * 10**(i)
+        dig = dig * 10 ** i
         num2 = num2 + dig
     print(num2)
 
