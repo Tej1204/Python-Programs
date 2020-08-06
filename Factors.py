@@ -1,12 +1,7 @@
-import math
-
-num = input("Please enter a number: ")
-num = int(num)
+num = int(input("Please enter a number: "))
 print("\nThese are the factors: ")
 
-for i in range(num+1):
-    if i == 0:
-        continue
-    div = num % i
-    if div == 0:
+for i in range(1,int(num ** 0.5)+1):
+    if num % i == 0:
         print(i)
+        print(num//i)
