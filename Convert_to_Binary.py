@@ -1,14 +1,13 @@
 def convert_binary(number):
-    binary_code = 0
+    binary_code = []
     while number > 0:
-        for i in range(number):
-            dig = number % 2
-            dig = dig * 10 ** (i)
-            number = number // 2
-            binary_code = binary_code + dig
-    print(binary_code)
+        dig = number % 2
+        number = number // 2
+        binary_code.append(str(dig))
+    binary_code = binary_code[::-1]
+    return '-'.join(binary_code)
 
 
 number = int(input("Please enter a number: "))
 print('\nThe Binary code for ' + str(number) + ' is: ')
-convert_binary(number)
+print(convert_binary(number))
